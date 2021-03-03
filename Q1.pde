@@ -1,4 +1,5 @@
 float x1, y1, x2, y2;
+float r,g,b,counter;
 
 //attributes of the two circles - change to get differnt outputs
 float r1 = 120, r2=160;
@@ -18,18 +19,48 @@ void draw(){
  translate(width/2, height/2);
   
 
-  
+  stroke(r,g,b);
   x1= (r1*cos(theta1));
   x2= (r2*cos(theta2));
   y1=(r1*sin(theta1));
   y2=(r2*sin(theta2));
    
   line(x1,y1,x2,y2);
-  
-
+ 
    theta1 += speedTh1;
     theta2+= speedTh2;
-
-
+  
+  if(r ==255)
+  {
+    counter ++;
+    r= 254;
+  }else if(g ==255)
+  {
+    counter ++;
+    g= 254;
+  }else if (b ==255)
+  {
+    counter ++;
+    b= 254;
+  }
+  
+  
+ if(counter == 0)
+ {
+   r = r+5;
+ }else if(counter == 1)
+ {
+   g = g +5;
+ }else if(counter ==2)
+ {
+   b = b+5;
+ }else if(counter ==3)
+ {
+   r =0;
+   g =0;
+   b =0;
+   counter =0;
+ }
+  
   
 }
