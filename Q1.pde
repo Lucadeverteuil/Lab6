@@ -26,20 +26,10 @@ void draw(){
    
   line(x1,y1,x2,y2);
   
-  for(int x =0; x<1;x++)
-  {
+
    theta1 += speedTh1;
     theta2+= speedTh2;
-  x1= (r1*cos(theta1));
-  x2= (r2*cos(theta2));
-  y1=(r1*sin(theta1));
-  y2=(r2*sin(theta2));
-   
-  line(x1,y1,x2,y2);
- 
-    
-  }
-  
+
 
   
 }
